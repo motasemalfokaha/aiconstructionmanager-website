@@ -22,7 +22,7 @@
   <div class="legal-head">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective Date: August 27, 2026<br>Last Updated: August 27, 2026</div>
+    <div class="meta">Effective Date: August 27, 2026<br>Last Updated: November 16, 2026</div>
   </div>
   <article class="legal-card">
     <section><h2>1. Introduction</h2>
@@ -32,11 +32,13 @@
 <section><h2>2. Information We Collect</h2>
 <p>Depending on the features you use, the App may process account information such as your full name, email address, authentication credentials, unique account identifiers, and email-verification status.</p>
 <p>The App may also process construction project information that you enter, project images that you deliberately select from your device, and authentication information handled by Firebase Authentication or Google Sign-In.</p>
+<p>When you use available Engi features, we process your messages and selected conversation and project context. We also process service-use, cost and security records associated with your account. If Google Play purchases or subscriptions are made available, purchase-verification and entitlement information is also processed.</p>
 </section>
 <section><h2>3. Account Information and Authentication</h2>
 <p>Email-and-password accounts are created and managed through Firebase Authentication. The App does not store your plaintext password in its local project data.</p>
 <p>Firebase Authentication may process information needed to provide authentication, account security, fraud prevention, and abuse protection, including email addresses, passwords, IP addresses, user-agent information, and authentication identifiers.</p>
 <p>If you choose Sign in with Google, Google and Firebase Authentication may process your name, email address, Google account identifier, profile information made available through the authentication process, and authentication tokens required to complete sign-in.</p>
+<p>Firebase App Check, including Play Integrity on supported Android releases, helps verify requests from the App and protect backend services from abuse.</p>
 </section>
 <section><h2>4. Project and Construction Data</h2>
 <p>Project information may include project name, number, type, description, location, contract information, dates, value, budget, currency, costs, status, progress, notes, WBS, activities, milestones, relationships, calendars, holidays, stop days, baselines, Data Dates, approved updates, actual and remaining durations, planned and actual dates, Project Control information, schedule and cost performance information, historical updates, analysis, and reporting information.</p>
@@ -49,18 +51,22 @@
 <p>The App allows you to select a project image from your device gallery. When selected, the App creates a copy within the App&#x27;s local application storage.</p>
 <p>The current version does not automatically upload project images to our cloud servers. Removing or replacing an App-managed project image may also remove the corresponding local copy.</p>
 </section>
-<section><h2>7. Local Project Data Storage</h2>
-<p>In the current version, project-management data is primarily stored locally on your device and is separated using the authenticated user&#x27;s Firebase user identifier.</p>
-<p>The current version does not use Firebase Firestore or Firebase Cloud Storage to automatically synchronize your construction project database to our servers.</p>
+<section><h2>7. Local and Server-Side Storage</h2>
+<p>Project records and Engi conversations, setup information and planning drafts are primarily stored locally on your device and separated by account and project.</p>
+<p>The App does not automatically synchronize your complete construction project database to our servers. Using Engi does, however, send selected content for remote processing as described below.</p>
+<p>Our Firebase backend stores account-linked usage, cost, quota and security records. These are separate from the locally stored project database and conversation history.</p>
 <p>Local storage does not mean that all project data is encrypted at rest by AI Construction Manager. You should maintain appropriate device security and backups of important information.</p>
 </section>
 <section><h2>8. How We Use Information</h2>
 <p>We use information to create and authenticate accounts, verify email addresses, provide account recovery and password-management functions, manage projects, perform scheduling and Project Control calculations, manage WBS, calendars, costs and progress, generate analysis and reports, create PDFs, maintain App functionality and security, prevent unauthorized access or abuse, and comply with applicable legal obligations.</p>
 <p>We do not use project information for unrelated advertising purposes.</p>
+<p>Available Engi features use selected content to understand your requests, assist with project setup and planning, suggest draft changes, and explain project analyses. Usage and cost records support service limits, accounting and operational review; security records help prevent abuse. If subscriptions are offered, purchase data is used to verify purchases and manage access.</p>
 </section>
 <section><h2>9. Artificial Intelligence</h2>
-<p>Despite the name AI Construction Manager, the version covered by this Privacy Policy does not currently automatically transmit users&#x27; project data to an external generative-AI provider for AI processing.</p>
-<p>If a future version introduces AI functionality that sends project information, documents, prompts, images, or other user content to an external AI service, this Privacy Policy will be updated as appropriate before or in connection with deployment of that functionality.</p>
+<p>When you use available Engi features, your messages and selected context are sent through Firebase Functions to OpenAI for AI processing. This may include project type and scope, planning instructions, calendars, a limited portion of the conversation, planning drafts and selected project-analysis data.</p>
+<p>Depending on the feature, project-analysis context may include the project name and identifiers, dates, value, budget, currency, activities, WBS, progress, baselines, approved updates and performance information. Free-text messages may contain any personal or confidential information you choose to include.</p>
+<p>This processing supports the Engi response you request; it is distinct from backing up your complete project database. The current Engi features do not automatically send your selected project image to OpenAI.</p>
+<p>Only provide information you are authorized to share for this processing. Engi uses the OpenAI API. OpenAI states that API data is not used to train its models by default unless the API customer explicitly opts in to data sharing. Submitted content may still be retained for abuse monitoring or other purposes under the applicable service arrangements and policies. This does not guarantee immediate deletion or zero retention.</p>
 </section>
 <section><h2>10. PDF Reports, Printing and Export</h2>
 <p>When you choose to save, print, share, or otherwise export a report, information may leave the App&#x27;s local storage according to the destination you select, such as device storage, a printing service, another application, a sharing destination, or a cloud-storage service chosen by you.</p>
@@ -68,26 +74,29 @@
 </section>
 <section><h2>11. Sharing of Information</h2>
 <p>We do not sell your personal information or construction project data.</p>
-<p>Information may be processed or disclosed where necessary to provide authentication through Firebase or Google, complete an action requested by you, comply with applicable law or lawful requests, protect the App and its users, or investigate fraud, abuse, or security incidents.</p>
+<p>Information is shared with Firebase and Google to authenticate users, protect and operate services, and handle available purchase-verification features, and with OpenAI to process available Engi requests. Information may also be disclosed to complete an action requested by you, comply with law or lawful requests, protect the App and its users, or investigate fraud, abuse or security incidents.</p>
 </section>
 <section><h2>12. Third-Party Services</h2>
-<p>The current version uses third-party services including Google Firebase Authentication and Google Sign-In. These services may process information under their own terms, privacy policies, data-processing arrangements, and technical requirements.</p>
+<p>Services used by the App include Firebase Authentication, Firebase Functions, Firestore, Firebase App Check and Google Sign-In, together with OpenAI for available Engi features. Firebase App Check uses Play Integrity on supported Android releases. These providers process information under the applicable terms, policies and service arrangements.</p>
+<p>If Google Play purchases or subscriptions are made available, Google Play handles the purchasing process and our backend verifies purchase tokens with Google Play. The backend may store purchase and subscription identifiers, account associations, status, expiry and entitlement information, and an encrypted copy of purchase tokens using Google Cloud KMS to support verification and reconciliation.</p>
 </section>
 <section><h2>13. Data Retention</h2>
-<p>Locally stored project information generally remains on your device until you delete it through available App functionality, delete the applicable account and local App-managed data, clear applicable App data, remove it through device or operating-system controls, or otherwise remove it from local application storage.</p>
-<p>Authentication information processed by Firebase is subject to Firebase&#x27;s own retention practices, including retention needed for security, operational backups, fraud prevention, and legal compliance.</p>
+<p>Local project records and Engi data can remain on a device until removed through available App functions or applicable device and operating-system controls. The account-deletion process has the specific limits described in Section 14.</p>
+<p>Server-side usage, cost, security, purchase, entitlement and audit records are separate from local project data and are not automatically removed by the current in-app account-deletion process. They may remain after an account is deleted.</p>
+<p>Provider-side records, logs and backups may also remain under the applicable provider arrangements and policies. This Policy does not promise a fixed retention period or immediate deletion of every copy. Contact <a href="mailto:support@aiconstructionmanager.app">support@aiconstructionmanager.app</a> with questions or requests concerning retained information.</p>
 </section>
 <section><h2>14. Account and Data Deletion</h2>
-<p>The App provides an in-app mechanism to permanently delete your account and may require re-authentication for security.</p>
-<p>After a successful deletion, the App is designed to remove the Firebase Authentication account and App-managed local project data associated with that user on the device. Some information processed by third-party providers may remain temporarily in backups or security systems under their retention practices.</p>
-<p>For privacy or account-related assistance, contact <a href="mailto:support@aiconstructionmanager.app">support@aiconstructionmanager.app</a>.</p>
+<p>The App provides account deletion and may require re-authentication. The current process deletes the Firebase Authentication account, then removes the selected account&#x27;s local project records, numbering and project-screen settings on that device, and attempts to remove App-managed project images. Local cleanup may fail after the authentication account has been deleted.</p>
+<p>This process does not currently remove locally stored Engi conversations, setup information, drafts or other Engi records, or server-side usage, cost, security, purchase, entitlement or audit records. It does not erase exported reports, copies held by other applications or recipients, data on other devices, or provider-side records and backups.</p>
+<p>For account or data-deletion assistance, contact <a href="mailto:support@aiconstructionmanager.app">support@aiconstructionmanager.app</a>. Email is a request channel handled manually; sending an email does not itself delete data or remotely erase local device storage. We may need to verify your identity. Do not send passwords or purchase tokens.</p>
+<p>If a Google Play subscription is available and you have subscribed, deleting your App account does not itself cancel that subscription.</p>
 </section>
 <section><h2>15. Security</h2>
 <p>We take reasonable technical and organizational measures appropriate to the nature of the App and information being processed. No electronic storage, device, network, or transmission method can be guaranteed to be completely secure.</p>
 <p>You are responsible for maintaining the security of your device, account credentials, email account, exported reports, and copies of project information.</p>
 </section>
 <section><h2>16. International Data Processing</h2>
-<p>Although much of the current construction project data is stored locally on your device, account and authentication information is processed by Firebase and Google and may therefore be processed in countries different from the country in which you reside, subject to applicable legal and contractual safeguards.</p>
+<p>Although much of your project and conversation data is stored locally, Firebase, Google and OpenAI process information for the services described in this Policy. Information may be processed outside your country under the applicable provider arrangements and legal requirements.</p>
 </section>
 <section><h2>17. Your Rights and Choices</h2>
 <p>Depending on applicable law, you may have rights to access, correct, delete, object to or restrict certain processing, request information about how your data is handled, and exercise other rights provided by data-protection law.</p>
@@ -103,12 +112,12 @@
 <p>AI Construction Manager does not sell users&#x27; personal information or project information and does not sell project data to advertisers or data brokers.</p>
 </section>
 <section><h2>21. Changes to This Privacy Policy</h2>
-<p>Future versions may introduce cloud synchronization, cloud backup, collaboration, additional authentication methods, AI services, analytics, crash reporting, subscriptions, payment services, or other integrations.</p>
-<p>If changes materially affect how personal information is collected, used, stored, or shared, this Privacy Policy will be updated as appropriate. The Last Updated date will identify the most recent revision.</p>
+<p>The App and its integrations may change over time.</p>
+<p>If changes materially affect how personal information is collected, used, stored or shared, this Privacy Policy will be updated as appropriate. The Last Updated date identifies the most recent revision.</p>
 </section>
 <section><h2>22. Contact Us</h2>
 <p>For questions, requests, complaints, account issues, or privacy-related matters concerning AI Construction Manager, contact:</p>
-<p>AI Construction Manager — Email: <a href="mailto:support@aiconstructionmanager.app">support@aiconstructionmanager.app</a></p>
+<p>AI Construction Manager<br>Email: <a href="mailto:support@aiconstructionmanager.app">support@aiconstructionmanager.app</a></p>
 </section>
   </article>
 </main>
